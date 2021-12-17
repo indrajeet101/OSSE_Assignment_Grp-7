@@ -50,7 +50,7 @@ public class UserDAO {
 
 	public void insertUser(User user) throws SQLException {
 		System.out.println(INSERT_USERS_SQL);
-		// try-with-resource statement will auto close the connection.
+
 		try (Connection connection = getConnection();
 				PreparedStatement preparedStatement = connection.prepareStatement(INSERT_USERS_SQL)) {
 			preparedStatement.setString(1, user.getName());
@@ -82,6 +82,7 @@ public class UserDAO {
 				String country = rs.getString("country");
 				String phone = rs.getString("phone");
 				user = new User(id, name, email, country, phone);
+				int v = 5;
 			}
 		} catch (SQLException e) {
 			printSQLException(e);
