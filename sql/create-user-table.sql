@@ -6,6 +6,7 @@ create table users (
 	name varchar(120) NOT NULL,
 	email varchar(220) NOT NULL,
 	country varchar(120),
+	phone varchar(10),
 	PRIMARY KEY (id)
 );
 
