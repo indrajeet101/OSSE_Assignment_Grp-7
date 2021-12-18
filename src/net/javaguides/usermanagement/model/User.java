@@ -12,6 +12,7 @@ public class User {
 	protected String email;
 	protected String country;
 	protected String phone;
+	protected String social_security;
 	
 	public User() {
 	}
